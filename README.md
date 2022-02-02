@@ -1,25 +1,22 @@
 # Cordova Music Controls Plugin 2
 
-<img src='https://imgur.com/fh3ACOq.png' width='564' height='342'>
+<img src='https://imgur.com/fh3ACOq.png'>
 
 Music controls for Cordova applications. Display a 'media' notification with play/pause, previous, next buttons, allowing the user to control the play. Handles headset events (plug, unplug, headset button).
 
 This plugin is forked from the original which is no longer maintained but which can be found at:
 https://github.com/homerours/cordova-music-controls-plugin
 
-This plugin is renamed as cordova-plugin-music-controls2 for easy differentiation and to allow for publishing
+This plugin is renamed as cordova-plugin-music for easy differentiation and to allow for publishing
 updates to npm to make life easier for everyone.
 
 ## Supported platforms
 - Android (4.1+) ([homerours](https://github.com/homerours))
-- Windows (10+, by [filfat](https://github.com/filfat))
 - iOS 8+ (by [0505gonzalez](https://github.com/0505gonzalez))
 
 ## Installation
-- Current release
-`cordova plugin add cordova-plugin-music-controls2`
 - Bleeding edge direct from github
-`cordova plugin add https://github.com/ghenry22/cordova-plugin-music-controls2`
+`cordova plugin add https://github.com/EduardoKrausME/cordova-plugin-music`
 
 ## Methods
 - Create the media controls:
@@ -149,24 +146,29 @@ MusicControls.updateElapsed({
 
 - Android only:
 ```javascript
-'music-controls-media-button-next', 'music-controls-media-button-pause', 'music-controls-media-button-play',
-'music-controls-media-button-play-pause', 'music-controls-media-button-previous', 'music-controls-media-button-stop',
-'music-controls-media-button-fast-forward', 'music-controls-media-button-rewind', 'music-controls-media-button-skip-backward',
-'music-controls-media-button-skip-forward', 'music-controls-media-button-step-backward', 'music-controls-media-button-step-forward',
-'music-controls-media-button-meta-left', 'music-controls-media-button-meta-right', 'music-controls-media-button-music',
-'music-controls-media-button-volume-up', 'music-controls-media-button-volume-down', 'music-controls-media-button-volume-mute',
+'music-controls-media-button-next',
+'music-controls-media-button-pause',
+'music-controls-media-button-play',
+'music-controls-media-button-play-pause',
+'music-controls-media-button-previous',
+'music-controls-media-button-stop',
+'music-controls-media-button-fast-forward',
+'music-controls-media-button-rewind',
+'music-controls-media-button-skip-backward',
+'music-controls-media-button-skip-forward',
+'music-controls-media-button-step-backward',
+'music-controls-media-button-step-forward',
+'music-controls-media-button-meta-left',
+'music-controls-media-button-meta-right',
+'music-controls-media-button-music',
+'music-controls-media-button-volume-up',
+'music-controls-media-button-volume-down',
+'music-controls-media-button-volume-mute',
 'music-controls-media-button-headset-hook'
 ```
 
 - iOS Only:
 ```javascript
-'music-controls-skip-forward', 'music-controls-skip-backward'
+'music-controls-skip-forward',
+'music-controls-skip-backward'
 ```
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request

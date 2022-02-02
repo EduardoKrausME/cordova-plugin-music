@@ -1,35 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"
-	id="cordova-plugin-music-controls2"
-	version="3.0.6">
+        id="cordova-plugin-music"
+        version="3.0.7">
 	<name>Music Controls</name>
 	<keywords>cordova,music,controller,controls,media,plugin,notification,lockscreen,now,playing</keywords>
-	<repo>https://github.com/ghenry22/cordova-plugin-music-controls2</repo>
+	<repo>https://github.com/EduardoKrausME/cordova-plugin-music</repo>
 	<description>Music controls for Cordova apps</description>
-	<license>MIT</license>
-	<author>ghenry22</author>
 
-	<engines>
-		<engine name="cordova" version=">=4.0.0"/>
-	</engines>
-
-	<asset src="www/MusicControls.js" target="js/MusicControls.js"/>
+	<asset src="www/MusicControls.js" target="js/MusicControls.js" />
 
 	<js-module src="www/MusicControls.js" name="MusicControls">
 		<clobbers target="MusicControls" />
 	</js-module>
 
-	<!-- android -->
-	<platform name="android">
+    <!-- android -->
+    <platform name="android">
 		<config-file target="res/xml/config.xml" parent="/*">
-			<feature name="MusicControls" >
-				<param name="android-package" value="com.homerours.musiccontrols.MusicControls"/>
+			<feature name="MusicControls">
+				<param name="android-package" value="com.homerours.musiccontrols.MusicControls" />
 			</feature>
 		</config-file>
 
 		<config-file target="AndroidManifest.xml" parent="/*">
 			<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-			<uses-permission android:name="android.permission.BLUETOOTH"/>
+			<uses-permission android:name="android.permission.BLUETOOTH" />
 			<uses-permission android:name="android.permission.WAKE_LOCK" />
 			<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 		</config-file>
@@ -48,13 +42,6 @@
 		<source-file src="src/android/MusicControlsInfos.java" target-dir="src/com/homerours/musiccontrols" />
 		<source-file src="src/android/MusicControlsServiceConnection.java" target-dir="src/com/homerours/musiccontrols" />
 		<source-file src="src/android/KillBinder.java" target-dir="src/com/homerours/musiccontrols" />
-	</platform>
-
-	<!-- windows -->
-	<platform name="windows">
-		<js-module src="src/windows/MusicControlsProxy.js" name="MusicControlsProxy">
-			<merges target="" />
-		</js-module>
 	</platform>
 
 	<platform name="ios">
